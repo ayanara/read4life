@@ -4,47 +4,70 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
-body {
-    background-image: url(/images/hero-decor-bg.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    
+html {
+    height: 100%;
 }
 
-.woman {
-    position: absolute;
-
+body {
+    background-image: url(/images/freepik--background-simple--inject-74.png);
+    background-size: cover;
+     
 }
 
 .cabecalho-links {
-    
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    top: 50px;
-    
-    
 }
 
 .cabecalho-menu {
-   
-    display: flex;
-    width: 15%;
-    
-    
+    padding: 45px;
+    width: 40%;
+    text-decoration: none;
 }
 
 .cabecalho-menu-itens {
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    
-    font-family: 'IBM Plex Mono', monospace;
+    text-decoration: none;
     color: #ffffff;
-    font-style: normal;
-    font-size: 14px;
-    
+    list-style-type: none;
+    text-transform: capitalize;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn p {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-family: cursive; 
+}
+
+button {
+    background: linear-gradient(135deg, #FF7A00 0%, #F7C100 98.16%);
+    border: none;
+    border-radius: 10px;
+    width: 400px;
+    height: 60px;
+    width: 100%;
+    max-width: 300px;
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
 }
