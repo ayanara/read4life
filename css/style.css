@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,8 +11,12 @@ html {
 }
 
 body {
-    background-image: url(/images/freepik--background-simple--inject-74.png);
+    background-image: url(/images/freepik--background-simple--inject-74\ \(1\).png);
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
  
 }
 
@@ -29,10 +35,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     list-style-type: none;
-    padding: 45px;
-    width: 40%;
+    padding: 15px;
     text-decoration: none;
     
 }
@@ -40,14 +44,15 @@ body {
 .header-menu-items a {
     font-size: 1.7 rem;
     padding: .4rem 1.5rem;
-    border-radius: 5rem;
-    color: black;
+    border-radius: 1rem;
+    color: #191516;
+    font-family:'PT Serif', serif;
 } 
 
 .header-menu-items a.active,
 .header-menu-items a:hover {
     color: aliceblue;
-    background: #FD687D;
+    background: #00B295;
 
 }
 
@@ -61,6 +66,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
+
+}
+
+img {
+    padding-bottom: 5px;
 }
 
 .container p {
@@ -70,26 +81,30 @@ body {
     width: 100%;
     max-width: 300px;
     padding: 10px;
-    font-family: cursive; 
+    font-family: 'PT Serif', serif;
+    font-size: 14px;
 }
 
 .container button {
     background: linear-gradient(135deg, #FF7A00 0%, #F7C100 98.16%);
     border: none;
-    border-radius: 10px;
-    width: 400px;
-    height: 60px;
+    border-radius: 1rem;
     width: 100%;
+    height: 45px;
     max-width: 300px;
     color: aliceblue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'PT Serif', serif;
     font-size: 16px;
+
 }
 
 .content-section {
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color: #F9F9ED;
+    padding-bottom: 20px;
+    padding-top: 20px;
     
 }
 
@@ -97,12 +112,18 @@ body {
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+
 }
 
 .last-releases {
-    background: #F7C100;
     width: 100%;
     
+}
+
+.last-releases h3 {
+    font-family:'PT Serif', serif;
+    color: #191516;
+
 }
 
 .slide {
