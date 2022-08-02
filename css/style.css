@@ -1,126 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --dark-color: #1b1c31;
+    --gree:#1a936f;
+    --violet: #2E1C46;
+    --gree-light: #88d498;
+    --pink: #e08dac;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid var(--dark-color);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
 
 * {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
-    padding: 0;
+    margin: 0; padding: 0;
     box-sizing: border-box;
+    outline: none; border: none;
     text-decoration: none;
+    transition: all .2s linear;
+    transition: width none;
 }
 
-.header-links {
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{ 
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--dark-color);
+}
+
+body {
+    height: 300rem;
+}
+
+.header .header-1 {
+    background: var(--violet);
+    padding: 1.5rem 9%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 30px 100px;
-    z-index: 10000;
-    
-}
-
-.header-menu-items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 15px;
-    text-decoration: none;
-    
-}
-
-.header-menu-items a {
-    font-size: 1.7 rem;
-    padding: .4rem 1.5rem;
-    border-radius: 20px;
-    color: #f9f9ed;
-    font-family:'PT Serif', serif;
-} 
-
-.header-menu-items a.active,
-.header-menu-items a:hover {
-    color: #f9f9ed;
-    background: #00B295;
-
-}
-
-.home-page {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.home-page img {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.home-page #moon {
-    mix-blend-mode: screen;
-}
-
-.home-page #text {
-    position: absolute;
-    color: #F9F9ED;
-    white-space: nowrap;
-    font-size: 7.5vw;
-    z-index: 9;
-}
-
-
-.home-page #btn {
-    display: inline-block;
-    position: absolute;
-    transform: translateY(100px);
-    background: #20a4f3;
-    border: none;
-    border-radius: 30px;
-    width: 100%;
-    height: 50px;
-    max-width: 300px;
-    color: aliceblue;
-    font-family:'PT Serif', serif;
-    font-size: 20px;
-
+    justify-content: space-between;
 
 }
-.home-section {
-    position: absolute;
-    display: flex;
 
-    width: 100%;
+.header .header-1 .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--pink);
 }
 
-.last-releases {
-    width: 100%;
+.header .header-1 .logo i {
+    color:var(--pink);
     
 }
 
-.last-releases h3 {
+.header .header-1 .search-form {
+    width: 40rem;
+    height: 4.5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    background: #fff;
     display: flex;
-    justify-content: center;
-    font-family:'PT Serif', serif;
-    font-size: 30px;
-    color: #f9f9ed;
-    padding-bottom: 25px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.header .header-1 .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    text-transform: none;
+    height: 100%;
+    width: 100%;
 
 }
 
-.slide {
-    display: flex;
-    justify-content: center;
-   
+.header .header-1 .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--dark-color);
 }
 
-.imagem {
-    position: relative;
-    width: 100px;
-    margin-left: 20px;
-    
+.header .header-1 .search-form label:hover {
+    color: var(--pink);
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--pink);
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: var(--dark-color);
+}
+
+#search-btn{
+   display: none;
 }
