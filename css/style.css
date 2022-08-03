@@ -2,9 +2,10 @@
 
 :root {
     --dark-color: #1b1c31;
-    --gree:#1a936f;
+    --green:#1a936f;
     --violet: #2E1C46;
-    --gree-light: #88d498;
+    --green-light: #88d498;
+    --green-linear: linear-gradient(135deg, #98FEE6 0%, #02D1A7 98.16%);
     --pink: #e08dac;
     --border: .1rem solid rgba(0,0,0,.1);
     --border-hover: .1rem solid var(--dark-color);
@@ -42,6 +43,25 @@ html::-webkit-scrollbar-thumb {
 
 body {
     height: 300rem;
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: block;
+    width: 94%;
+    padding: .9rem 3rem;
+    border-radius: 20px;
+    color: #fff;
+    background: var(--green-linear);
+    box-shadow: var(--box-shadow);
+    font-size: 1.7rem;
+    margin: .7rem;
+   
+}
+
+.btn:hover {
+    background: rgb(199, 195, 195);
 }
 
 .header .header-1 {
@@ -109,4 +129,94 @@ body {
 
 #search-btn{
    display: none;
+}
+
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255,.9);
+    position: fixed;
+    top: 0; right: -105%;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form-container.active {
+    right: 0;
+}
+
+.login-form-container form {
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    width: 40rem;
+    padding: 2rem;
+    margin: 2rem;
+    
+}
+
+.login-form-container form .icon-form {
+   text-align: center;
+}
+
+.login-form-container form i {
+    font-size: 6rem;
+    color: var(--dark-color);
+   
+
+}
+
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.login-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box {
+    margin: .7rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 20px;
+    padding: 1rem 1.2rem;
+    color: var(--dark-color);
+}
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form label {
+    font-size: 1.5rem;
+    color: var(--violet);
+}
+
+.login-form-container form p {
+    padding-top: .8rem;
+    color: var(--violet);
+    font-size: 1.3rem;
+}
+
+.login-form-container form p a {
+    color: var(--green-light);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn {
+    position: absolute;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--dark-color);
+
 }
