@@ -41,8 +41,61 @@ html::-webkit-scrollbar-thumb {
     background: var(--dark-color);
 }
 
+.home {
+    background-image: url(/images/background/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.home .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 42rem;
+}
+
+.home .row .books-slider {
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.home .row .books-slider a img{
+    width: 25%;
+    height: 20rem;
+    margin: 5px;
+}
+
+.home .row .books-slider a:hover img{
+    transform: scale(1.1);
+}
+
+.home .row .content h3 {
+    color: aliceblue;
+    font-size: 4.5rem;
+}
+
+.home .row .content p {
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.home .row .content .btn {
+    width: 41%;
+    
+}
+
 body {
     height: 300rem;
+}
+
+section {
+    padding: 5rem 9%;
 }
 
 
@@ -219,4 +272,9 @@ body {
     font-size: 5rem;
     color: var(--dark-color);
 
+}
+
+h1::selection {
+    color: #fff;
+    background: gray;
 }
