@@ -1,50 +1,280 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --dark-color: #1b1c31;
+    --green:#1a936f;
+    --violet: #2E1C46;
+    --green-light: #88d498;
+    --green-linear: linear-gradient(135deg, #98FEE6 0%, #02D1A7 98.16%);
+    --pink: #e08dac;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid var(--dark-color);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-body {
-    background-image: url(/images/hero-decor-bg.png);
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{ 
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--dark-color);
+}
+
+.home {
+    background-image: url(/images/background/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     
 }
 
-.woman {
-    position: absolute;
-
-}
-
-.cabecalho-links {
-    
+.home .row {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    top: 50px;
-    
+    align-items: center;
+    flex-wrap: 1.5rem;
+}
+
+.home .row .content {
+    flex: 1 1 42rem;
+}
+
+.home .row .books-slider {
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.home .row .books-slider a img{
+    width: 25%;
+    height: 20rem;
+    margin: 5px;
+}
+
+.home .row .books-slider a:hover img{
+    transform: scale(1.1);
+}
+
+.home .row .content h3 {
+    color: aliceblue;
+    font-size: 4.5rem;
+}
+
+.home .row .content p {
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.home .row .content .btn {
+    width: 41%;
     
 }
 
-.cabecalho-menu {
+body {
+    height: 300rem;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+
+.btn {
+    margin-top: 1rem;
+    display: block;
+    width: 94%;
+    padding: .9rem 3rem;
+    border-radius: 20px;
+    color: #fff;
+    background: var(--green-linear);
+    box-shadow: var(--box-shadow);
+    font-size: 1.7rem;
+    margin: .7rem;
    
+}
+
+.btn:hover {
+    background: rgb(199, 195, 195);
+}
+
+.header .header-1 {
+    background: var(--violet);
+    padding: 1.5rem 9%;
     display: flex;
-    width: 15%;
-    
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header .header-1 .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--pink);
+}
+
+.header .header-1 .logo i {
+    color:var(--pink);
     
 }
 
-.cabecalho-menu-itens {
-    
+.header .header-1 .search-form {
+    width: 40rem;
+    height: 4.5rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    background: #fff;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.header .header-1 .search-form input {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    text-transform: none;
+    height: 100%;
     width: 100%;
+
+}
+
+.header .header-1 .search-form label {
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--dark-color);
+}
+
+.header .header-1 .search-form label:hover {
+    color: var(--pink);
+}
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--pink);
+}
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color: var(--dark-color);
+}
+
+#search-btn{
+   display: none;
+}
+
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255,.9);
+    position: fixed;
+    top: 0; right: -105%;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form-container.active {
+    right: 0;
+}
+
+.login-form-container form {
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    width: 40rem;
+    padding: 2rem;
+    margin: 2rem;
     
-    font-family: 'IBM Plex Mono', monospace;
-    color: #ffffff;
-    font-style: normal;
-    font-size: 14px;
-    
+}
+
+.login-form-container form .icon-form {
+   text-align: center;
+}
+
+.login-form-container form i {
+    font-size: 6rem;
+    color: var(--dark-color);
+   
+
+}
+
+.login-form-container form h3 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.login-form-container form span {
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
+
+.login-form-container form .box {
+    margin: .7rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 20px;
+    padding: 1rem 1.2rem;
+    color: var(--dark-color);
+}
+
+.login-form-container form .checkbox {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0;
+}
+
+.login-form-container form label {
+    font-size: 1.5rem;
+    color: var(--violet);
+}
+
+.login-form-container form p {
+    padding-top: .8rem;
+    color: var(--violet);
+    font-size: 1.3rem;
+}
+
+.login-form-container form p a {
+    color: var(--green-light);
+    text-decoration: underline;
+}
+
+.login-form-container #close-login-btn {
+    position: absolute;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--dark-color);
+
+}
+
+h1::selection {
+    color: #fff;
+    background: gray;
 }

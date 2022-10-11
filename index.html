@@ -4,33 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read for Life</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <title>Read For Life </title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- font bootstrap-icon cdn link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    
-    <header class="cabecalho-links">
-        <nav class="cabecalho-menu">
-            <ul class="cabecalho-menu-itens" >
-                <li>PLATAFORM</li>
-                <li>ABOUT</li>
-                <li>SING UP</li>
-            </ul>
 
-        </nav>
-    </header>
-    <main class="conteudo" >
-        <img src="images/freepik--Character--inject-71.png" alt="Mulher lendo" class="woman">
-        <img src="images/freepik--Plants--inject-72.png" class="plants">
-        <div class="quadro-botão">
-            <button>CRIE SUA LISTA!</button>
-            <p>Só se vê bem com o coração, o essencial é invisível aos olhos.
-                O Pequeno Príncipe, Antoine de Saint-Exupéry</p>
+<!--header section starts-->
+
+<header class="header">
+    <div class="header-1">
+        <a href="#" class="logo"><i class="bi bi-bookmark-heart"></i> ReadForLife</a>
+
+            <form action="" class="search-form">
+                <input type="search" id="search-box" name="" placeholder="Procure aqui...">
+                <label for="search-box" class="bi bi-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="bi bi-heart"></a>
+                <a href="#" class="bi bi-chat-right-heart"></a>
+                <a id="login-btn" class="bi bi-person"></a>
+                
+            </div>
+    </div>
+
+<!-- login forms -->
+
+<div class="login-form-container">
+
+    <div id="close-login-btn" class="bi bi-x-circle"></div>
+
+    <form action="">
+        <div class="icon-form">
+        <i class="bi bi-person-circle"></i></div>
+        <h3>Acesse aqui</h3>
+        <span>Email</span>
+        <input type="email" name="" placeholder="Email" id="" class="box">
+        <span>Senha</span>
+        <input type="password" name="" placeholder="senha" id="" class="box">
+        <div class="checkbox">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Lembre-se</label>
         </div>
-    </main>
+        <input type="submit" value="Entrar" class="btn">
+        <p>Esqueceu a senha? <a href="#">Click aqui</a></p>
+        <p>Não tem conta? <a href="#">Criar conta</a></p>
+    </form>
+</div>
+
+</header>
+
+<!--header section ends-->
+
+
+<!--home sections starts-->
+
+<section class="home" id="home">
+    <div class="row">
+        <div class="content">
+            <h3>Venha fazer sua lista</h3>
+            <p>“Pretender-se que a vida dos homens seja sempre dirigida pela razão é 
+                destruir toda a possibilidade de vida.” “Que ninguém se engane, 
+                só consigo a simplicidade através de muito trabalho.” “Enquanto eles 
+                não se conscientizarem, não serão rebeldes autênticos e, enquanto não se 
+                rebelarem, não têm como se conscientizar.”</p>
+            <a id="create-btn" href="#" class="btn">Crie sua lista aqui</a>
+        </div>
+        <div class="books-slider">
+            <div class="wraper">
+                <a href="#"><img src="/images/image/book-1.jpg" alt=""></a>
+                <a href="#"><img src="/images/image/book-2.jpg" alt=""></a>
+                <a href="#"><img src="/images/image/book-3.jpg" alt=""></a>
+                <a href="#"><img src="/images/image/book-4.jpg" alt=""></a>
+                <a href="#"><img src="/images/image/book-5.jpg" alt=""></a>
+                <a href="#"><img src="/images/image/book-6.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--home sections ends-->
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="/js/scrip.js"></script>
     
 </body>
 </html>
-
