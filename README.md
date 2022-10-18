@@ -1,6 +1,10 @@
 # read4life
 
-Projeto criado para por em prática dos aprendizados de HTML, CSS e JavaScrip. 
+Projeto  criar um site de organização de livros e leituras.
 
-A ideia é criar um site de organização de livros e leituras.
-
+-Pages
+Login
+Perfil inicial
+Perfil do úsário
+livro
+editora
