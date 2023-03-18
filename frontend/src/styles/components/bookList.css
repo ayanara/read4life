@@ -8,13 +8,13 @@
   grid-gap: 20px;
 }
 
-.card {
+.cardBook {
   background-color: antiquewhite;
   text-align: center;
   position: relative;
 }
 
-.card img {
+.cardBook img {
   width: 80%;
   margin-top: 20px;
   
