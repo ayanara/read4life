@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from "../components/Card";
+import BooksList from "../components/BooksList";
 import { searchBookApi } from '../API/fetchAPI'
 import '../styles/pages/home.css';
 
@@ -40,7 +40,7 @@ const Home= () => {
     <div className="container">
      
      {
-      <Card book={bookData}/>
+      <BooksList book={bookData}/>
      }
       
     </div>

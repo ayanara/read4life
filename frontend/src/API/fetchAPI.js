@@ -5,3 +5,8 @@ export const searchBookApi = async (book) => {
   return results.data.items;
 };
 
+export const getBookApi = async (bookId) => {
+  const results = await  axios.get(`https://www.googleapis.com/books/v1/volumes/${bookId}?q=&key=AIzaSyCglcdpeAT6w2m1upeKtjGkHLlsuSYQG3M`);
+  return results.data;
+};
+
