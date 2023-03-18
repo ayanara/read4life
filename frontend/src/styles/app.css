@@ -1,9 +1,42 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --dark-color: #1b1c31;
+    --green:#1a936f;
+    --violet: #2E1C46;
+    --green-light: #88d498;
+    --green-linear: linear-gradient(135deg, #98FEE6 0%, #02D1A7 98.16%);
+    --pink: #e08dac;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --border-hover: .1rem solid var(--dark-color);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
 
-#root {
-  min-width: max-content;
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    transition: width none;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{ 
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--dark-color);
 }

@@ -19,7 +19,8 @@ const BooksList = ({ book }) => {
                 onClick={()=> navigate (`/book/${item.id}`)}
               >
               </img>
-              <div className="bottom">
+
+              <div className="descriptions">
                 <h3 className="title">{item.volumeInfo.title}</h3>
                 <p className="authors">{item.volumeInfo.authors}</p>
               </div>
