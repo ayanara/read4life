@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BooksList from "../components/BooksList";
 import { searchBookApi } from '../API/fetchAPI'
 import '../styles/pages/home.css';
+import Header from "../components/Header";
 
 
 const Home= () => {
@@ -16,18 +17,19 @@ const Home= () => {
   }
   return (
     <>
-    <div className="header">
+    <Header/>
+    <div className="header-header">
       <div className="row1">
         <h1>Uma casa sem livros é um corpo sem alma.</h1>
         <p>Cícero</p>
       </div>
     </div>
     <div className="row2">
-      <h2> Pesquise seu livro</h2>
       <div className="search">
         <input 
         type="text" 
         value={search}
+        placeholder="Busque seu livro aqui"
         onChange={e=>setSearch(e.target.value)}
         onKeyPress={searchBook}
         />
