@@ -1,0 +1,38 @@
+.book-details {
+  padding: 6rem 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.book-description {
+  background: white;
+  margin: 50px;
+  border-radius: 30px;
+  color: (--dark-color);
+  font-style: normal;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+}
+
+.book-description h2 {
+  margin-top: 15px;
+  text-align: justify;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+.book-description h1 {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 4rem;
+  
+}
+
+
+spam {
+  color: rgba(0,0,0,.5);
+  font-size: 14px;
+}
