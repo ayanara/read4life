@@ -4,9 +4,9 @@ import '../styles/components/header.css';
 const Header = () => {
   return (
     <div className="header-nav">
-      <h3 className='sobre'>Sobre</h3>
-      <h3>Perfil</h3>
-      <h3>Favoritos</h3>
+      <button className='bi bi-person-circle'></button>
+      <button className='bi bi-bookmark-heart-fill'></button>
+      <button className='bi bi-heart-fill'></button>
     </div>
   )
 }

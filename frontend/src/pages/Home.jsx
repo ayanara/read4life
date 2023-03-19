@@ -33,7 +33,6 @@ const Home= () => {
         onChange={e=>setSearch(e.target.value)}
         onKeyPress={searchBook}
         />
-        <button><i className="bi bi-search"></i></button>
       </div>
       <div>
         {/* <img src="./imagem/livro.jpg" alt="livro" width="300px"></img> */}

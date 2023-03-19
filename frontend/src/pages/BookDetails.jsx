@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { getBookApi } from '../API/fetchAPI';
+import Header from "../components/Header";
 import '../styles/pages/bookDetails.css'
 
 
@@ -17,7 +18,10 @@ const BookDetails = () => {
   let thumbnail = book?.volumeInfo?.imageLinks && book.volumeInfo.imageLinks.medium;
   if (!book.volumeInfo) return null
   return (
-    <div className="book-details">
+    <div><Header/>
+    <button className="bi bi-backspace-fill" ></button>
+    <div
+    className="book-details">
       <div className="book-img">
         <img
           src={thumbnail}
@@ -30,11 +34,19 @@ const BookDetails = () => {
         <h1 className="title">{book.volumeInfo.title}</h1>
         <h2 className="authors"><spam>Escrito por: </spam> {book.volumeInfo.authors}</h2>
         <h2 className="publisher">{book.volumeInfo.publisher}</h2>
-        <h2 className="description">{book.volumeInfo.description}</h2>
+        <h3 className="description" dangerouslySetInnerHTML={{__html:book.volumeInfo.description}}></h3>
         <h2 className="publishedDate"><spam>Ano da Publicado: </spam> {book.volumeInfo.publishedDate}</h2>
         <h2 className="pageCount"><spam>Número de páginas: </spam>{book.volumeInfo.pageCount}</h2>
+
+        <div className="book-button">
+          <button>Lido</button>
+          <button>Quero ler</button>
+          <button>Lendo</button>
+
+        </div>
         
       </div>
+    </div>
     </div>
   )
 }
