@@ -22,6 +22,12 @@ const Card = () => {
           <button onClick={closeCard}>
             <AiOutlineClose  />
           </button>
+          <div className='checkOut'>
+          <button>
+            <span>Procedimento para finalizar a compra</span>
+            <label htmlFor=''>R$: 50,00</label>
+          </button>
+        </div>
       </div>
     </>
   )
