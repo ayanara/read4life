@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import BooksList from "../components/BooksList";
-import { searchBookApi } from '../API/fetchAPI'
-import '../styles/pages/home.css';
-import Header from "../components/Header";
+import BooksList from "../../components/hero/BooksList";
+import { searchBookApi } from '../../API/fetchAPI'
+import Header from "../../components/header/Header";
 
 
 const Home= () => {
@@ -19,10 +18,6 @@ const Home= () => {
     <>
     <Header/>
     <div className="header-header">
-      <div className="row1">
-        <h1>Uma casa sem livros é um corpo sem alma.</h1>
-        <p>Cícero</p>
-      </div>
     </div>
     <div className="row2">
       <div className="search">

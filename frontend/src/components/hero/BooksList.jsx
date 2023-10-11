@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import '../styles/components/bookList.css';
 
 const BooksList = ({ book }) => {
   const navigate = useNavigate();
@@ -23,6 +22,7 @@ const BooksList = ({ book }) => {
               <div className="descriptions">
                 <h3 className="title">{item.volumeInfo.title}</h3>
                 <p className="authors">{item.volumeInfo.authors}</p>
+                <p className="price">{item.sa}</p>
               </div>
             </div>
             </>

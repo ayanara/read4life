@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { getBookApi } from '../API/fetchAPI';
-import Header from "../components/Header";
-import '../styles/pages/bookDetails.css'
+import { getBookApi } from '../../API/fetchAPI';
+import Header from "../../components/header/Header";
 
 
 const BookDetails = () => {
