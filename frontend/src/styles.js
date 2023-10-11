@@ -1,5 +1,3 @@
-import { createOverlay } from "tailwindcss-jit";
-
 const styles = {
   paddingX: "sm:px-0 px-16",
   paddingY: "sm:py-16 py-6",
