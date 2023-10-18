@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
+import { store } from '../../store'
 
 import Card from "./Card";
 import User from "./User";
 import { styles } from "../../styles";
+import { searchBookApi } from "../../API/fetchAPI";
 
 
 export const Header = () => {
   const [active, setActive] = useState("");
   const [scrolled, setScrolled] = useState(false);
+
+  const searchBook = (evento) => {
+    if(evento.key === "Enter")
+    {
+      searchBookApi(evento.target.value)
+      .then(response => {
+        store.livros = response
+      })
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +57,7 @@ export const Header = () => {
         </div>
         <div className='search flex'>
           <AiOutlineSearch className='searchIcon' />
-          <input type='text' placeholder='Search...' />
+          <input type='text' placeholder='Search...' onKeyPress={searchBook} />
         </div>
         <div className='account flexCenter'>
           <Card />

@@ -22,7 +22,7 @@ const BooksList = ({ book }) => {
               <div className="descriptions">
                 <h3 className="title">{item.volumeInfo.title}</h3>
                 <p className="authors">{item.volumeInfo.authors}</p>
-                <p className="price">{item.sa}</p>
+                <p className="price">{item.saleInfo.listPrice?.amount}</p>
               </div>
             </div>
             </>
